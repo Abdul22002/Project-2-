@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Interests</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        .panel-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .left-panel,
+        .middle-panel,
+        .right-panel {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-panel {
+            flex: 0 0 30%; /* Set the width to 30% */
+            margin-right: 20px; /* Add some margin between panels */
+            color: #444;
+        }
+
+        .left-panel h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .left-panel p {
+            line-height: 1.6;
+        }
+
+        .left-panel .highlight {
+            background-color: #ffc107;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .middle-panel,
+        .right-panel {
+            flex: 1; /* Take up remaining space */
+        }
+
+        .middle-panel h2,
+        .right-panel h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .middle-panel p,
+        .right-panel p {
+            line-height: 1.6;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            width: 200px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .float-box {
+            float: right;
+            width: 200px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Interests</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="Home.html" target="_top">Home</a></li>
+                <li><a href="resume.html" target="main">Resume</a></li>
+                <li><a href="personalinterests.html" target="main" class="active">Personal Interests</a></li>
+                <li><a href="contact.html" target="main">Contact Us</a></li>
+			</ul>
+        </nav>
+        
+        <section class="panel-container">
+            <div class="left-panel">
+                <h2>My Interests</h2>
+                <p>Outside of work, I enjoy a variety of hobbies and interests that help me unwind and recharge.</p>
+                <ul>
+                    <li><span class="highlight">Hiking</span>: Exploring nature trails and soaking in the tranquility of the wilderness.</li>
+                    <li><span class="highlight">Photography</span>: Capturing breathtaking landscapes and candid moments.</li>
+                    <li><span class="highlight">Reading</span>: Immersing myself in thought-provoking books and literature.</li>
+                    <li><span class="highlight">Cooking</span>: Experimenting with new recipes and flavors in the kitchen.</li>
+                    <li><span class="highlight">Traveling</span>: Discovering new cultures, cuisines, and perspectives around the globe.</li>
+                </ul>
+            </div>
+            <div class="middle-panel">
+                <h2>Featured Interest</h2>
+                <p>Travel & Cultural Immersion</p>
+                <p>Exploring diverse cultures, traditions, and landscapes across the globe is an integral part of my life's journey. Traveling not only broadens my horizons but also fosters empathy, understanding, and appreciation for the rich tapestry of humanity. Whether it's wandering through bustling markets in Marrakech, savoring street food delicacies in Bangkok, or marveling at ancient ruins in Rome, I cherish the transformative power of travel and the profound connections it fosters with people and places.</p>
+            </div>
+            
+            <div class="right-panel">
+                <h2>Recent Project</h2>
+                <p>Web Development Portfolio</p>
+                <p>I recently completed a comprehensive web development portfolio showcasing my skills, projects, and professional experience. The portfolio includes responsive designs, interactive elements, and seamless user experiences, demonstrating my proficiency in front-end and back-end development technologies.</p>
+            </div>
+        </section>
+
+        <div class="fixed-box">
+            <h2>Connect with Me</h2>
+            <p>Feel free to reach out if you have any questions or would like to connect!</p>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+
+        <div class="float-box">
+            <h2>Upcoming Event</h2>
+            <p>Join me at the Web Development Conference 2024!</p>
+            <p>Date: April 15-17, 2024</p>
+            <p>Location: Virtual Event</p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Your Name</p>
+        </footer>
+    </div>
+	 <!-- Floating Image Box -->
+        <div class="float-box">
+            <img src="usf.png" alt="USF Logo" width="100">
+        </div>
+	
+</body>
+</html>

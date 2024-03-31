@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #66;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.FixedBox {
+	position: absolute;
+	top: 200px; 
+	left: 250px;
+	width: 300px;
+	background-color: #006747;
+	border-width: 8px;
+	border-style: outset;
+	border-color: gold;
+	padding: 10px;
+	margin: 5px;
+	font-weight: bold;
+	font-size: 18pt;
+	color: white; 
+
+}
+ .Fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+ }
+
+.floating-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.main-content {
+    padding-top: 50px; /* Adjust according to header height */
+    display: flex;
+}
+
+.panel {
+    flex-grow: 1;
+    height: 100vh; /* Adjust according to viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.left-panel {
+    width: 200px; /* Adjust panel width */
+}
+
+.middle-panel {
+    flex-grow: 2; /* Adjust middle panel width */
+}
+
+.right-panel {
+    width: 200px; /* Adjust panel width */
+}
+
+h1 {
+    color: #80;
+}
+
+p {
+    color: #666;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
