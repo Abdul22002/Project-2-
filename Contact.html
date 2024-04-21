@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<iframe src="Menu.html" height="900" width="20%"
-style-"border:none" align="left" name="menu"></iframe>
+<iframe src="menu.html" height="900" width="20%" style="border:none;" align="left" name="menu"></iframe>
     <div class="container">
         <h1>Contact Us</h1>
         <p>Feel free to reach out to us with any questions or inquiries!</p>
@@ -17,6 +16,59 @@ style-"border:none" align="left" name="menu"></iframe>
             <h1><strong>Phone:</strong> 123-456-7890</h1>
             <h2><strong>Address:</strong> 123 Main Street, City, Country</h2>
         </div>
+        <form name="thisForm" id="thisForm" onsubmit="processForm(); return false;">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" required>
+                <option value="none">Select Priority</option>
+                <option value="urgent">Urgent</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="spam">Spam</option>
+            </select>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="message-box" id="message-box">Your message will appear here.</div>
     </div>
+    <script>
+        function processForm() {
+            var e = document.forms["thisForm"].fullname.value + "\n" + document.forms["thisForm"].email.value;
+            e += "\n\n" + document.forms["thisForm"].subject.value + "\n";
+
+            var priority = document.forms["thisForm"].priority.value;
+            var p = "";
+            switch (priority) {
+                case "none":
+                    p = "No priority selected...";
+                    break;
+                case "urgent":
+                    p = "URGENT: Must be serious";
+                    break;
+                case "high":
+                    p = "pretty darn IMPORTANT...";
+                    break;
+                case "medium":
+                    p = "Kind of important";
+                    break;
+                case "low":
+                    p = "Not important at all";
+                    break;
+                case "spam":
+                    p = "once you've read all your spam";
+                    break;
+            }
+            e += "priority: " + p + "\n\n" + document.forms["thisForm"].message.value;
+
+            document.getElementById("message-box").innerText = e;
+        }
+    </script>
 </body>
 </html>
